@@ -1,6 +1,5 @@
-"use client";
-
-import React, { useState } from 'react'
+"use client"
+import React, { useState } from 'react';
 import Navbar from "../compoments/Navbar"
 
 const Creation = () => {
@@ -21,7 +20,7 @@ const Creation = () => {
 
   return (
     <div>
-        <Navbar />
+      <Navbar />
       <h2>Clanilie Création c'est ?</h2>
       <p>
         Nous vendons nos jolies créations ainsi que des créations pour les concerts. Nous proposons une variété de bracelets uniques, faits à la main avec amour et soin. Que ce soit pour une soirée décontractée entre amis ou pour un événement spécial, nos bracelets ajoutent une touche d'élégance et de style à n'importe quelle tenue. De plus, nous sommes ouvertes aux demandes personnalisées pour des bracelets adaptés à des occasions spécifiques telles que des concerts. Contactez-nous pour discuter de vos besoins et nous serons ravis de créer quelque chose de spécial pour vous !
@@ -37,7 +36,7 @@ const Creation = () => {
         </button>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Creation
+export default Creation;
