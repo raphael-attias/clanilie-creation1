@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -10,8 +10,23 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Fermer le menu lorsqu'on clique en dehors
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (!event.target.closest(".navbar")) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      window.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
+
   return (
-    <nav className="bg-gray-800 flex flex-wrap items-center justify-between p-6">
+    <nav className="navbar flex flex-wrap items-center justify-between p-6" style={{ backgroundColor: "rgb(185, 225, 139)" }}>
       {/* Mobile menu button */}
       <div className="block lg:hidden">
         <button
@@ -36,7 +51,7 @@ const Navbar = () => {
       </div>
 
       {/* Logo */}
-      <div className="flex items-center flex-shrink-0 text-white mr-6 lg:order-last lg:mr-0">
+      <div className="flex items-center flex-shrink-0 text-white mr-6 lg:order-first lg:mr-0">
         <span className="font-semibold text-xl tracking-tight">Clanilie Création</span>
       </div>
 
@@ -45,19 +60,19 @@ const Navbar = () => {
         <div className="text-sm lg:flex-grow">
           <Link href="/" legacyBehavior>
             <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
-              Accueil
+              Home
             </a>
           </Link>
 
-          <Link href="/realisations" legacyBehavior>
+          <Link href="/creation" legacyBehavior>
             <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
-              Réalisations
+              Création
             </a>
           </Link>
 
-          <Link href="/entreprise" legacyBehavior>
+          <Link href="/equipe" legacyBehavior>
             <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
-              L'équipe
+              Équipe
             </a>
           </Link>
 

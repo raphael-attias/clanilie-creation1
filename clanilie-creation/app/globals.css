@@ -1,3 +1,113 @@
 .navbar {
   background-color: rgb(185, 225, 139);
+/* app/globals.css */
+}
+/* home*/
+.customButton {
+  background-color: #ff6dc6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto; /* Center the button */
+}
+
+.customButton:hover {
+  background-color: #e05aa3;
+}
+
+.imageList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center images horizontally */
+  gap: 10px; /* Add some space between images */
+}
+
+.imageList li {
+  display: inline-block;
+}
+
+.container {
+  text-align: center; /* Center text and children */
+  padding: 20px;
+}
+/*grid*/
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images par ligne */
+  grid-gap: 10px;
+  padding: 20px;
+  max-height: 600px; /* Limite la hauteur de la grille à 600px */
+  overflow: hidden; /* Cache les images qui dépassent de la grille */
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+}
+
+.see-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #ff6dc6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-button:hover {
+  background-color: #ff89d6;
+}
+/*contact*/
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #ff6dc6;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  background-color: #ff6dc6;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #ff89d6;
 }
