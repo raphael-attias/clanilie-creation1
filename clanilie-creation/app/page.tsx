@@ -8,10 +8,10 @@ const images = ['i1.jpg', 'i2.jpg', 'i3.jpg', 'i4.jpg'];
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-black">
       <Navbar />
-      <div className="container">
-        <h2>Une bref présentation</h2>
+      <div className="container bg-black">
+        <h2 className="text-center text-pink-600">Une bref présentation</h2>
         <p>
           Nous sommes un groupe d'amis qui créons des bracelets qui peuvent être personnalisés !
           Vous pouvez faire votre demande <Link href="/contact">ici</Link>

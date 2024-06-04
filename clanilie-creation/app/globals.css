@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .navbar {
   background-color: rgb(185, 225, 139);
 /* app/globals.css */
