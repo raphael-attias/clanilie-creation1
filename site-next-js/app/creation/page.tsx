@@ -21,8 +21,8 @@ const Creation = () => {
   return (
     <div>
       <Navbar />
-      <h2 className="text-center text-2xl text-pink-600">Clanilie Création c'est ?</h2>
-      <p className="text-center px-4">
+      <h2 className="text-center text-2xl text-pink-600 p-10">Clanilie Création c'est ?</h2>
+      <p className="text-center px-4 p-5">
         Nous vendons nos jolies créations ainsi que des créations pour les concerts. Nous proposons une variété de bracelets uniques, faits à la main avec amour et soin. Que ce soit pour une soirée décontractée entre amis ou pour un événement spécial, nos bracelets ajoutent une touche d'élégance et de style à n'importe quelle tenue. De plus, nous sommes ouvertes aux demandes personnalisées pour des bracelets adaptés à des occasions spécifiques telles que des concerts. Contactez-nous pour discuter de vos besoins et nous serons ravis de créer quelque chose de spécial pour vous !
       </p>
       <div className="grid grid-cols-4 gap-2 p-4 max-h-[600px] overflow-hidden">
