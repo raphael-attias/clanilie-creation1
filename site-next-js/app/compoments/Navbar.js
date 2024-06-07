@@ -10,7 +10,6 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // Fermer le menu lorsqu'on clique en dehors
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (!event.target.closest(".navbar")) {
@@ -26,7 +25,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="navbar flex flex-wrap items-center justify-between p-6 background-color: rgb(185, 225, 139)" style={{ backgroundColor: "rgb(185, 225, 139)" }}>
+    <nav className="navbar flex flex-wrap items-center justify-between p-6" style={{ backgroundColor: "rgb(185, 225, 139)" }}>
+      {/* Logo */}
+      <div className="flex items-center flex-shrink-0 text-white mr-6">
+        <span className="font-semibold text-xl tracking-tight">Clanilie Création</span>
+      </div>
+
       {/* Mobile menu button */}
       <div className="block lg:hidden">
         <button
@@ -48,11 +52,6 @@ const Navbar = () => {
             )}
           </svg>
         </button>
-      </div>
-
-      {/* Logo */}
-      <div className="flex items-center flex-shrink-0 text-white mr-6 lg:order-first lg:mr-0">
-        <span className="font-semibold text-xl tracking-tight">Clanilie Création</span>
       </div>
 
       {/* Desktop and mobile menu */}
