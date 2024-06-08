@@ -24,8 +24,8 @@ const Contact = () => {
   return (
     <div>
   <Navbar />
-  <h1 className="text-center text-pink-600">Contactez-nous</h1>
-  <form onSubmit={submitForm} className="max-w-xl mx-auto bg-white rounded-lg p-8 shadow-md">
+  <h1 className="text-center text-xl text-pink-600 m-5">Contactez-nous !</h1>
+  <form onSubmit={submitForm} className="max-w-xl mx-auto bg-white rounded-lg p-8 shadow-md m-3">
     <label className="block mb-2">
       Nom :
       <input type="text" name="name" onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-pink-600 focus:border-pink-600" />

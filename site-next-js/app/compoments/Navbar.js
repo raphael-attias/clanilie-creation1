@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className="navbar flex flex-wrap items-center justify-between p-6" style={{ backgroundColor: "rgb(185, 225, 139)" }}>
       {/* Logo */}
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
+      <div className="flex items-center flex-shrink-0 text-pink-600 mr-6">
         <span className="font-semibold text-xl tracking-tight">Clanilie Création</span>
       </div>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="block lg:hidden">
         <button
           onClick={toggleMenu}
-          className="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
+          className="flex items-center px-3 py-2 border rounded text-pink-600 border-gray-400 hover:text-white hover:border-white"
           style={{ backgroundColor: "#ff6dc6", maxWidth: "65px", maxHeight: "65px" }}
         >
           <svg
@@ -58,25 +58,25 @@ const Navbar = () => {
       <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}>
         <div className="text-sm lg:flex-grow">
           <Link href="/" legacyBehavior>
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-pink-600 hover:text-gray-200 mr-4">
               Home
             </a>
           </Link>
 
           <Link href="/creation" legacyBehavior>
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-pink-600 hover:text-gray-200 mr-4">
               Création
             </a>
           </Link>
 
           <Link href="/equipe" legacyBehavior>
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4">
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-pink-600 hover:text-gray-200 mr-4">
               Équipe
             </a>
           </Link>
 
           <Link href="/contact" legacyBehavior>
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white">
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-pink-600 hover:text-gray-200">
               Contact
             </a>
           </Link>
