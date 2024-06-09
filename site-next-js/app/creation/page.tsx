@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Navbar from "../components/Navbar";
+import Navbar from "../compoments/Navbar"
 
 const Creation = () => {
   const [images, setImages] = useState([]);
@@ -32,7 +32,7 @@ const Creation = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 p-3 max-w-screen-lg mx-auto">
           {imagesToDisplay.map((image, index) => (
             <div key={index} className="relative bg-green-200 rounded-lg border border-gray-300 p-2 flex justify-center items-center hover:transform hover:scale-105 transition-transform duration-300">
-              <img src={image.src} alt={image.alt} className="max-w-full h-auto object-cover" />
+              <img src={images.src} alt={image.alt} className="max-w-full h-auto object-cover" />
             </div>
           ))}
         </div>
