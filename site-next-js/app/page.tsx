@@ -8,7 +8,7 @@ const images = ['i1.jpg', 'i2.jpg', 'i3.jpg', 'i4.jpg'];
 
 export default function Home() {
   return (
-    <main>
+    <main className=" bg-white">
   <div>
     <Navbar />
     <div className="container mx-auto px-4">
