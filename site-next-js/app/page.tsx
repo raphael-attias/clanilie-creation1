@@ -12,7 +12,7 @@ export default function Home() {
   <div>
     <Navbar />
     <div className="container mx-auto px-4">
-      <h2 className="text-center text-pink-600 m-3">Une bref présentation</h2>
+      <h2 className="text-center text-[#ff6dc6] m-3">Une bref présentation</h2>
       <p className="text-center text-justify m-3">
         Nous sommes un groupe d'amis qui créons des bracelets qui peuvent être personnalisés !
         Vous pouvez faire votre demande <Link href="/contact">ici</Link>
@@ -28,7 +28,7 @@ export default function Home() {
       </ul>
 
       <Link href="/creation">
-        <button className="customButton block mx-auto mt-4 px-6 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 cursor-pointer">
+        <button className="customButton block mx-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer">
           Créer votre bracelet
         </button>
       </Link>

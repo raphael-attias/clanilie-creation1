@@ -22,28 +22,28 @@ const Contact = () => {
   };
 
   return (
-    <main className="bg-white">
+    <main className="bg-slate-50">
       <div>
         <Navbar />
-        <h1 className="text-center text-xl text-pink-600 m-5">Contactez-nous !</h1>
+        <h1 className="text-center text-xl text-[#ff6dc6] m-5">Contactez-nous !</h1>
         <form onSubmit={submitForm} className="max-w-xl mx-auto bg-white rounded-lg p-8 shadow-md m-3">
-          <label className="block mb-2">
+          <label className="block mb-2 text-[#ff6dc6]">
             Nom :
-            <input type="text" name="name" onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-pink-600 focus:border-pink-600" />
+            <input type="text" name="name" onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-[#ff6dc6] focus:border-[#ff6dc6]" />
           </label>
-          <label className="block mb-2">
+          <label className="block mb-2 text-[#ff6dc6]">
             Prénom :
-            <input type="text" name="surname" onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-pink-600 focus:border-pink-600" />
+            <input type="text" name="surname" onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-[#ff6dc6] focus:border-[#ff6dc6]" />
           </label>
-          <label className="block mb-2">
+          <label className="block mb-2 text-[#ff6dc6]">
             Email :
-            <input type="email" name="email" onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-pink-600 focus:border-pink-600" />
+            <input type="email" name="email" onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-[#ff6dc6] focus:border-[#ff6dc6]" />
           </label>
-          <label className="block mb-2">
+          <label className="block mb-2 text-[#ff6dc6]">
             Message :
-            <textarea name="message" onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-pink-600 focus:border-pink-600"></textarea>
+            <textarea name="message" onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-[#ff6dc6] focus:border-[#ff6dc6]"></textarea>
           </label>
-          <input type="submit" value="Envoyer" className="bg-pink-600 text-white rounded-md px-6 py-2 hover:bg-pink-700 cursor-pointer" />
+          <input type="submit" value="Envoyer" className="bg-[#ff6dc6] text-white rounded-md px-6 py-2 hover:bg-[#ff6dc6] cursor-pointer" />
         </form>
       </div>
     </main>
