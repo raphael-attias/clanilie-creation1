@@ -1,5 +1,5 @@
 // pages/index.js
-import Navbar from "../app/compoments/Navbar";
+import Navbar from "./components/Navbar";
 import "../app/globals.css";
 import Image from 'next/image';
 import Link from 'next/link';

@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import Navbar from "../compoments/Navbar"
+import Navbar from "../components/Navbar"
 
 const équipe = () => {
   return (

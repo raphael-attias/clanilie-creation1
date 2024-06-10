@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Navbar from "../compoments/Navbar"
+import Navbar from "../components/Navbar"
 
 const Creation = () => {
   const images = [
