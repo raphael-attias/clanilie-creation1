@@ -1,5 +1,6 @@
 // pages/index.js
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "../app/globals.css";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -34,6 +35,7 @@ export default function Home() {
       </Link>
     </div>
   </div>
+  <Footer />
 </main>
 
   );
