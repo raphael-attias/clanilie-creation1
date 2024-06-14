@@ -54,7 +54,7 @@ const Creation = () => {
 </ul>
         {imagesToDisplay.length < images.length && (
           <div className="flex justify-center">
-            <button onClick={showMore} className="mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer">
+            <button onClick={showMore} className="mt-4 mb-8 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer">
               Voir plus
             </button>
           </div>

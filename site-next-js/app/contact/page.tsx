@@ -1,7 +1,7 @@
-'use client';
-
+// ContactPage.tsx
+"use client" ;
 import React from 'react';
-import Navbar from "../components/Navbar";
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const ContactPage: React.FC = () => {
@@ -19,31 +19,34 @@ const ContactPage: React.FC = () => {
 
   return (
     <main>
-      <Navbar /> {/* Assurez-vous que Navbar est importé et utilisé correctement */}
+      <Navbar />
       <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
         <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
           <h1 className="text-2xl font-bold text-center mb-4 text-[#ff6dc6]">Contactez-nous !</h1>
-          <p className="text-gray-700 mb-6">
+          <p className="text-[#ff6dc6] mb-6">
             Nous c'est Clarisse, Nina et Emilie. Ici on vend nos jolies créations, ainsi que nos créations pour le Eras tour (demande pour d'autres concerts possible).
             Des bracelets personnalisables sont possibles, n'hésitez pas à nous contacter en mp :)
           </p>
           <div className="flex flex-col space-y-4">
             <button
               onClick={handleEmailClick}
-              className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              className="w-full bg-[#b9e18b] hover:bg-[#016435] text-[#016435] font-bold py-2 px-4 rounded"
             >
+              <img src="/images/logos/mail.png" alt="Email Icon" className="w-6 h-6 inline-block mr-2" />
               Envoyer un email
             </button>
             <button
               onClick={handleVintedClick}
-              className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+              className="w-full bg-[#b9e18b] hover:bg-[#016435] text-[#016435] font-bold py-2 px-4 rounded"
             >
+              <img src="/images/logos/vinted.png" alt="Vinted Icon" className="w-6 h-6 inline-block mr-2" />
               Acheter sur Vinted
             </button>
             <button
               onClick={handleInstagramClick}
-              className="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded"
+              className="w-full bg-[#b9e18b] hover:bg-[#016435] text-[#016435] font-bold py-2 px-4 rounded"
             >
+              <img src="/images/logos/instagram.png" alt="Instagram Icon" className="w-6 h-6 inline-block mr-2" />
               Suivre sur Instagram
             </button>
           </div>

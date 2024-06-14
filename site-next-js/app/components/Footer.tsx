@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="flex flex-col items-center lg:flex-row lg:items-center">
         <div className="mb-4 lg:mb-0">
           <a
-            href="https://www.instagram.com/"
+            href="https://www.vinted.fr/member/201655926"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#016435] text-sm hover:text-green-600 transition-colors duration-300 mr-4"
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
             Instagram
           </a>
           <a
-            href="https://www.vinted.fr/"
+            href="https://www.instagram.com/claniliecreations/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#016435] text-sm hover:text-green-600 transition-colors duration-300"

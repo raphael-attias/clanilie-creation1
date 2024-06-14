@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="block lg:hidden">
         <button
           onClick={toggleMenu}
-          className="flex items-center px-3 py-2 border rounded text-[#016435] border-white hover:text-white hover:border-white"
+          className="flex items-center px-3 py-2 border rounded text-[#016435] border-[#016435] hover:text-white hover:border-[#016435]"
           style={{ backgroundColor: "#ff6dc6", maxWidth: "65px", maxHeight: "65px" }}
         >
           <svg

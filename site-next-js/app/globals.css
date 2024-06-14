@@ -31,3 +31,9 @@ body {
     text-wrap: balance;
   }
 }
+
+.image-container {
+  border: 5px solid #b9e18b; /* Couleur du cadre vert */
+  border-radius: 8px; /* Arrondi du cadre */
+  overflow: hidden; /* Masquage du contenu qui déborde */
+}
