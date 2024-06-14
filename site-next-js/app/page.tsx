@@ -1,5 +1,5 @@
 // pages/index.tsx
-"use client" ;
+"use client";
 
 import React from 'react';
 import Navbar from "./components/Navbar";
@@ -63,23 +63,19 @@ const HomePage: React.FC = () => {
           </p>
         </section>
 
-        
-
-        <div className="flex justify-center items-center mt-10 mb-20">
+        <div className="flex justify-center items-center mt-10 mb-20 flex-wrap gap-4">
           <Link href="/creation">
-          <button className="mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-5">
-            Créer votre bracelet
-          </button>
+            <button className="w-[377px] h-[40px] md:w-auto md:h-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2">Créer votre bracelet</button>
           </Link>
           <button
             onClick={handleEmailClick}
-            className="mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-5"
+            className="flex-shrink-0 w-full md:w-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2"
           >
             Contactez-nous
           </button>
           <button
             onClick={handleVintedClick}
-            className="mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-5"
+            className="flex-shrink-0 w-full md:w-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2"
           >
             Acheter sur Vinted
           </button>
