@@ -13,7 +13,7 @@ export default function Home() {
     <Navbar />
     <div className="container mx-auto px-4">
       <h2 className="text-center text-2xl text-[#ff6dc6] capitalize m-3">Une bref présentation</h2>
-      <p className="text-center text-justify m-3">
+      <p className="text-center text-justify m-3 text-[#ff6dc6]">
         Nous sommes un groupe d'amis qui créons des bracelets qui peuvent être personnalisés !
         Vous pouvez faire votre demande <Link href="/contact">ici</Link>
       </p>

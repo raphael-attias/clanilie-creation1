@@ -1,64 +1,57 @@
-"use client";
+'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from "../components/Navbar";
-import axios from 'axios';
+import Footer from '../components/Footer';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    surname: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+const ContactPage: React.FC = () => {
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:votreemail@example.com';
   };
 
-  const submitForm = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:3001/send-email', formData);
-      console.log(response.data);
-      setFormData({
-        name: '',
-        surname: '',
-        email: '',
-        message: ''
-      });
-    } catch (error) {
-      console.error('Erreur lors de l\'envoi du formulaire : ', error);
-    }
+  const handleVintedClick = () => {
+    window.open('https://www.vinted.fr/', '_blank');
+  };
+
+  const handleInstagramClick = () => {
+    window.open('https://www.instagram.com/', '_blank');
   };
 
   return (
-    <main className="bg-slate-50">
-      <div>
-        <Navbar />
-        <h1 className="text-center text-xl text-[#016435] m-5">Contactez-nous !</h1>
-        <form onSubmit={submitForm} className="max-w-xl mx-auto bg-white rounded-lg p-8 shadow-md m-3">
-          <label className="block mb-2 text-[#016435]">
-            Nom :
-            <input type="text" name="name" value={formData.name} onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-[#ff6dc6] focus:border-[#ff6dc6]" />
-          </label>
-          <label className="block mb-2 text-[#016435]">
-            Prénom :
-            <input type="text" name="surname" value={formData.surname} onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-[#ff6dc6] focus:border-[#ff6dc6]" />
-          </label>
-          <label className="block mb-2 text-[#016435]">
-            Email :
-            <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-[#ff6dc6] focus:border-[#ff6dc6]" />
-          </label>
-          <label className="block mb-2 text-[#016435]">
-            Message :
-            <textarea name="message" value={formData.message} onChange={handleChange} className="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring-[#ff6dc6] focus:border-[#ff6dc6]"></textarea>
-          </label>
-          <input type="submit" value="Envoyer" className="bg-[#016435] text-white rounded-md px-6 py-2 hover:bg-[#ff6dc6] cursor-pointer" />
-        </form>
+    <main>
+      <Navbar /> {/* Assurez-vous que Navbar est importé et utilisé correctement */}
+      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+        <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+          <h1 className="text-2xl font-bold text-center mb-4 text-[#ff6dc6]">Contactez-nous !</h1>
+          <p className="text-gray-700 mb-6">
+            Nous c'est Clarisse, Nina et Emilie. Ici on vend nos jolies créations, ainsi que nos créations pour le Eras tour (demande pour d'autres concerts possible).
+            Des bracelets personnalisables sont possibles, n'hésitez pas à nous contacter en mp :)
+          </p>
+          <div className="flex flex-col space-y-4">
+            <button
+              onClick={handleEmailClick}
+              className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+            >
+              Envoyer un email
+            </button>
+            <button
+              onClick={handleVintedClick}
+              className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+            >
+              Acheter sur Vinted
+            </button>
+            <button
+              onClick={handleInstagramClick}
+              className="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded"
+            >
+              Suivre sur Instagram
+            </button>
+          </div>
+        </div>
       </div>
+      <Footer />
     </main>
   );
 };
 
-export default Contact;
+export default ContactPage;
