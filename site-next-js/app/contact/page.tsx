@@ -6,15 +6,15 @@ import Footer from '../components/Footer';
 
 const ContactPage: React.FC = () => {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:votreemail@example.com';
+    window.location.href = 'mailto:claniliecreations@gmail.com';
   };
 
   const handleVintedClick = () => {
-    window.open('https://www.vinted.fr/', '_blank');
+    window.open('https://www.vinted.fr/member/201655926', '_blank');
   };
 
   const handleInstagramClick = () => {
-    window.open('https://www.instagram.com/', '_blank');
+    window.open('https://www.instagram.com/claniliecreations/', '_blank');
   };
 
   return (
