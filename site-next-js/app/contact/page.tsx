@@ -1,8 +1,9 @@
-// ContactPage.tsx
-"use client" ;
+"use client";
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const ContactPage: React.FC = () => {
   const handleEmailClick = () => {
@@ -18,9 +19,9 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <main>
+    <main className="bg-gray-100 min-h-screen flex flex-col">
       <Navbar />
-      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+      <div className="flex flex-grow items-center justify-center p-4">
         <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
           <h1 className="text-2xl font-bold text-center mb-4 text-[#ff6dc6]">Contactez-nous !</h1>
           <p className="text-[#ff6dc6] mb-6">
@@ -28,25 +29,25 @@ const ContactPage: React.FC = () => {
             Des bracelets personnalisables sont possibles, n'hésitez pas à nous contacter en mp :)
           </p>
           <div className="flex flex-col space-y-4">
-            <button
-              onClick={handleEmailClick}
-              className="w-full bg-[#b9e18b] hover:bg-[#016435] text-[#016435] font-bold py-2 px-4 rounded"
+            <a
+              href="mailto:claniliecreations@gmail.com"
+              className="w-full bg-[#b9e18b] hover:bg-[#016435] text-[#016435] font-bold py-2 px-4 rounded flex items-center justify-center"
             >
-              <img src="/images/logos/mail.png" alt="Email Icon" className="w-6 h-6 inline-block mr-2" />
+              <Image src="/images/logos/mail.png" alt="Email Icon" width={24} height={24} className="inline-block mr-2" />
               Envoyer un email
-            </button>
+            </a>
             <button
               onClick={handleVintedClick}
-              className="w-full bg-[#b9e18b] hover:bg-[#016435] text-[#016435] font-bold py-2 px-4 rounded"
+              className="w-full bg-[#b9e18b] hover:bg-[#016435] text-[#016435] font-bold py-2 px-4 rounded flex items-center justify-center"
             >
-              <img src="/images/logos/vinted.png" alt="Vinted Icon" className="w-6 h-6 inline-block mr-2" />
+              <Image src="/images/logos/vinted.png" alt="Vinted Icon" width={24} height={24} className="inline-block mr-2" />
               Acheter sur Vinted
             </button>
             <button
               onClick={handleInstagramClick}
-              className="w-full bg-[#b9e18b] hover:bg-[#016435] text-[#016435] font-bold py-2 px-4 rounded"
+              className="w-full bg-[#b9e18b] hover:bg-[#016435] text-[#016435] font-bold py-2 px-4 rounded flex items-center justify-center"
             >
-              <img src="/images/logos/instagram.png" alt="Instagram Icon" className="w-6 h-6 inline-block mr-2" />
+              <Image src="/images/logos/instagram.png" alt="Instagram Icon" width={24} height={24} className="inline-block mr-2" />
               Suivre sur Instagram
             </button>
           </div>
