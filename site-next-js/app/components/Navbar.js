@@ -69,12 +69,6 @@ const Navbar = () => {
             </a>
           </Link>
 
-          <Link href="/equipe" legacyBehavior>
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-[#016435] hover:text-white mr-4">
-              Équipe
-            </a>
-          </Link>
-
           <Link href="/contact" legacyBehavior>
             <a className="block mt-4 lg:inline-block lg:mt-0 text-[#016435] hover:text-white">
               Contact
