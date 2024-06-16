@@ -40,13 +40,10 @@ const Creation = () => {
       <div className="bg-[#b9e18b] p-[10px] rounded-lg flex justify-center items-center" style={{ width: 'max-content', height: 'max-content' }}>
 
       <Image
-  src={`/images/${img}`}
+  src={`/images/produits/${img}`}
   alt={`Bracelet example ${index + 1}`}
   width={200}
   height={200}
-  layout="fixed"
-  objectFit="cover"
-  loading="lazy"
 />
       </div>
     </li>
