@@ -63,20 +63,20 @@ const HomePage: React.FC = () => {
           <Link href="/creation">
             <button className="w-[377px] h-[40px] md:w-auto md:h-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2">Créer votre bracelet</button>
           </Link>
+          <button
+            onClick={handleVintedClick}
+            className="w-[377px] h-[40px] md:w-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2"
+          >
+            Acheter sur Vinted
+          </button>
           <Link href="/contact">
           <button
             onClick={handleEmailClick}
-            className="flex-shrink-0 w-full md:w-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2"
+            className="w-[377px] h-[40px] md:w-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2"
           >
             Contactez-nous
           </button>
           </Link>
-          <button
-            onClick={handleVintedClick}
-            className="flex-shrink-0 w-full md:w-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2"
-          >
-            Acheter sur Vinted
-          </button>
         </div>
       </div>
       <Footer />
