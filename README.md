@@ -10,7 +10,7 @@ Le site est actuellement disponible sur [dev-web.littlestorm.eu](https://dev-web
 
 - Next.js
 - HTML/CSS/JavaScript
-- Framework XYZ (si applicable)
+- Framework XYZ 
 
 ## Fonctionnalités
 
