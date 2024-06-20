@@ -61,18 +61,18 @@ const HomePage: React.FC = () => {
 
         <div className="flex justify-center items-center mt-10 mb-20 flex-wrap gap-4">
           <Link href="/creation">
-            <button className="w-[377px] h-[40px] md:w-auto md:h-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2">Créer votre bracelet</button>
+            <button className="w-[300px] h-[40px] md:w-auto md:h-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2">Créer votre bracelet</button>
           </Link>
           <button
             onClick={handleVintedClick}
-            className="w-[377px] h-[40px] md:w-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2"
+            className="w-[300px] h-[40px] md:w-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2"
           >
             Acheter sur Vinted
           </button>
           <Link href="/contact">
           <button
             onClick={handleEmailClick}
-            className="w-[377px] h-[40px] md:w-auto mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2"
+            className="w-[300px] h-[40px] md:w-auto pr-10 pl-10 mt-4 px-6 py-2 bg-[#ff6dc6] text-white rounded-md hover:bg-[#ff6dc6] cursor-pointer m-2"
           >
             Contactez-nous
           </button>
