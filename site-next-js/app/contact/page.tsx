@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const images = ['i55.jpg', 'i45.jpg'];
+
 const ContactPage: React.FC = () => {
   const handleEmailClick = () => {
     window.location.href = 'mailto:claniliecreations@gmail.com';
