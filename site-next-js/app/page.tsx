@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
     window.open('https://www.vinted.fr/member/201655926', '_blank');
   };
 
-  const images = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // Example images array
+  const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
 
   return (
     <main className="bg-white min-h-screen flex flex-col">

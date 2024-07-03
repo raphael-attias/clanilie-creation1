@@ -43,7 +43,7 @@ const LoginPage: React.FC = () => {
           <label className="block mb-2 text-[#ff6dc6]">Username</label>
           <input
             type="text"
-            className="w-full p-2 border border-[#ff6dc6] rounded"
+            className="w-full p-2 border border-[#ff6dc6] rounded text-[#b9e105]"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             autoComplete="off"
@@ -53,7 +53,7 @@ const LoginPage: React.FC = () => {
           <label className="block mb-2 text-[#ff6dc6]">Password</label>
           <input
             type="password"
-            className="w-full p-2 border border-[#ff6dc6] rounded"
+            className="w-full p-2 border border-[#ff6dc6] rounded text-[#b9e105]"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             autoComplete="off"
