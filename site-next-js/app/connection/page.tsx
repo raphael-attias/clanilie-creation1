@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Navbar from "../components/Navbar"
+import Footer from '../components/Footer';
 
 const LoginPage: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -31,7 +33,9 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+    <main>
+      <Navbar />
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-1/3">
         <h2 className="text-2xl mb-4 text-[#ff6dc6]">{isRegistering ? 'Register' : 'Login'}</h2>
         {error && <p className="text-red-500 mb-4">{error}</p>}
@@ -69,6 +73,8 @@ const LoginPage: React.FC = () => {
           {isRegistering ? 'Switch to Login' : 'Switch to Register'}
         </button>
       </form>
+      </div>
+      <Footer />
     </main>
   );
 };
