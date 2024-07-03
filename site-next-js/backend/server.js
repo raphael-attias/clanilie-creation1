@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 const port = 5000;
@@ -11,20 +12,31 @@ const port = 5000;
 app.use(bodyParser.json());
 app.use(cors());
 
-const db = new sqlite3.Database(':memory:');
+const dbPath = path.resolve(__dirname, 'db', 'database.sqlite');
+const db = new sqlite3.Database(dbPath);
 
 db.serialize(() => {
-  db.run('CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, password TEXT)');
-  const hashedPassword = bcrypt.hashSync("...", 10);
-  db.run('INSERT INTO users (username, password) VALUES (?, ?)', ['rapatt', hashedPassword]);
+  db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT UNIQUE, password TEXT)');
 });
 
-// Helper function to create JWT token
 const createToken = (user) => {
   return jwt.sign({ id: user.id, username: user.username }, 'your_jwt_secret', { expiresIn: '1h' });
 };
 
-// Login route
+app.post('/api/register', (req, res) => {
+  const { username, password } = req.body;
+  const hashedPassword = bcrypt.hashSync(password, 10);
+
+  db.run('INSERT INTO users (username, password) VALUES (?, ?)', [username, hashedPassword], function(err) {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to register user' });
+    }
+    const user = { id: this.lastID, username };
+    const token = createToken(user);
+    res.json({ token });
+  });
+});
+
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
 
@@ -37,7 +49,6 @@ app.post('/api/login', (req, res) => {
   });
 });
 
-// Middleware to protect routes
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
@@ -51,7 +62,6 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
-// Protected route example
 app.get('/api/stats', authenticateToken, (req, res) => {
   res.json({ visits: 123, clicks: 456 });
 });
