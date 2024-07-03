@@ -15,7 +15,7 @@ const db = new sqlite3.Database(':memory:');
 
 db.serialize(() => {
   db.run('CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, password TEXT)');
-  const hashedPassword = bcrypt.hashSync("Lescrocsc'estbien13", 10);
+  const hashedPassword = bcrypt.hashSync("...", 10);
   db.run('INSERT INTO users (username, password) VALUES (?, ?)', ['rapatt', hashedPassword]);
 });
 
