@@ -41,7 +41,7 @@ const Creation = () => {
 
       <Image
   src={`/images/produits/${img}`}
-  alt={`Bracelet example ${index + 1}`}
+  alt={`Bracelet ${index + 1}`}
   width={200}
   height={200}
 />
