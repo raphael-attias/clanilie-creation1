@@ -4,7 +4,7 @@ Ce projet est un site web développé en Next.js pour permettre aux étudiantes 
 
 ## Accès au Site
 
-Le site est actuellement disponible sur [dev-web.littlestorm.eu](https://dev-web.littlestorm.eu).
+Le site est actuellement disponible sur [clanilie-creation.littlestorm.eu](https://clanilie-creation.littlestorm.eu).
 
 ## Technologies Utilisées
 

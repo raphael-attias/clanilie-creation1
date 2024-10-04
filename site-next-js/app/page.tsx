@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from 'react';
 import React from 'react';
 import Head from 'next/head';
 import Navbar from "./components/Navbar";
@@ -10,6 +11,27 @@ import Link from 'next/link';
 const images = ['i1.jpg', 'i2.jpg', 'i3.jpg', 'i4.jpg', 'i5.jpg', 'i6.jpg', 'i7.jpg', 'i8.jpg'];
 
 const HomePage: React.FC = () => {
+  const [visits, setVisits] = useState<number | null>(null);
+
+  useEffect(() => {
+    const incrementVisits = async () => {
+      try {
+        // Incrémenter les visites
+        await fetch('/api/visits', { method: 'POST' });
+  
+        // Récupérer le nombre total de visites
+        const response = await fetch('/api/visits');
+        const data = await response.json();
+        setVisits(data.total);
+      } catch (error) {
+        console.error('Erreur lors de la mise à jour des visites:', error);
+      }
+    };
+  
+    incrementVisits();
+  }, []);
+  
+
   const handleEmailClick = () => {
     window.location.href = 'mailto:claniliecreations@gmail.com';
   };
